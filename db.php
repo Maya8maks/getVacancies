@@ -1,13 +1,13 @@
 <?php
 // Configs
-/*define("HOST", "career.vubor.com");
+define("HOST", "career.vubor.com");
 define("USER", "career_user");
 define("PASS", "SoftBistro.2018");
-define("DBNAME", "career");*/
-define("HOST", "localhost");
+define("DBNAME", "career");
+/*define("HOST", "localhost");
 define("USER", "root");
 define("PASS", "secret");
-define("DBNAME", "vacancies_soft_bistro");
+define("DBNAME", "vacancies_soft_bistro");*/
 // Connect to database
 
 try {
