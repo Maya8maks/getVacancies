@@ -14,6 +14,19 @@ function saveStatus($db, $tableName, $query, $columnStatus)
     );
     return $resrUpdate;
 }
+function changeStatus($db)
+{
+    $resChange = sql($db,
+        "UPDATE `explorer` set 
+        `status` = 0 
+        WHERE `status` =  2"
+    );
+    return $resChange;
+}
+function getSelectVacancyUrl($db){
+    $res = sql($db, "SELECT `vacancy_url` FROM `vacancy` ", [], 'rows');
+    return $res;
+}
  function getSelectAll($db, $tableName, $data, $id){
      $res = sql($db, "SELECT * FROM `$tableName` WHERE `$data`=".$id, [], 'rows');
      return $res;

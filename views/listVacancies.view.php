@@ -1,4 +1,7 @@
 <div class="container">
+    <div class="btn-group">
+        <button type="button" ><a  href="/getNewVacancies">Get new vacancies</a></button>
+    </div>
     <p>List of vacancies</p>
 <table>
     <tr>

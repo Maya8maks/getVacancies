@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="/bootstrap/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/css.css">
 
     </head>
 
@@ -19,8 +19,8 @@
             <div class="container">
                 <nav class="class="blog-nav">
                     <a class="blog-nav-item" href="/">Home</a>
-                    <a class="blog-nav-item" href="/listVacancies">Get vacancies</a>
-                    <a class="blog-nav-item" href="/getVacancyDescription">Get description of the vacancy</a>
+                    <a class="blog-nav-item" href="/listVacancies">Get list of vacancies</a>
+
 
                 </nav>
             </div>

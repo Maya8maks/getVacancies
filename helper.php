@@ -123,9 +123,15 @@ function view($viewname, $data = []){
         include "views/$viewname.view.php";
     }
 }
-/*function view1($viewname, $data = []){
-    ob_start();
-    include "views/$viewname.view.php";
-    return ob_get_clean();
-}*/
 
+function viewVacancies($db){
+    $id = 1;
+    $listVacancies = getSelectAll($db, 'vacancy', 'explorer_id', $id);
+    $listDescript = sql($db, "SELECT * FROM `vacancy_description`", [], 'rows');
+    $count = count($listVacancies);
+    $num = 20;
+    $countPage = ceil($count / $num);
+    $page = $_GET['page'] ?? 0;
+    $viewname = 'listVacancies';
+    view($viewname, $data = ['countPage' => $countPage, 'count' => $count, 'num' => $num, 'page' => $page, 'listVacancies' => $listVacancies, 'listDescript'=>$listDescript]);
+}

@@ -3,6 +3,7 @@ $routs=[
     'listVacancies',
     'getVacancyDescription',
     'convertVacancy',
+    'getNewVacancies',
 ];
 
 $action = null;

@@ -1,17 +1,6 @@
 <?php
-// Configs
-define("HOST", "career.vubor.com");
-define("USER", "career_user");
-define("PASS", "SoftBistro.2018");
-define("DBNAME", "career");
-/*define("HOST", "localhost");
-define("USER", "root");
-define("PASS", "secret");
-define("DBNAME", "vacancies_soft_bistro");*/
-// Connect to database
-
 try {
-    $db = new PDO("mysql:host=".HOST.";dbname=".DBNAME.";charset=utf8mb4", "".USER."", "".PASS."");
+    $db = new PDO("mysql:host=".$config['db']['host'].";dbname=".$config['db']['database'].";charset=utf8mb4", "".$config['db']['user']."", "".$config['db']['password']."");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (PDOException $e) {

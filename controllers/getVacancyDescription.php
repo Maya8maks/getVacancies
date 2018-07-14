@@ -20,29 +20,4 @@ if( $action == 'getVacancyDescription' && $idRout ) {
 
     }
 }
-if( $action == 'getVacancyDescription'&& $idRout==null ) {
-    $tableName = 'vacancy';
-    $query = [];
-    $query['id'] = 'id';
-    $query['query'] = 'vacancy_url';
-    $query['status'] = 'vacancy_status';
-    $vacancyDescriptLink = getSelect($db, $tableName, $query);
 
-        if (!empty($vacancyDescriptLink)) {
-
-            $strDiscription = getDescript($vacancyDescriptLink);
-            if (!empty($strDiscription)) {
-
-                view('descriptOfVacancy', $data=['description'=>$strDiscription, 'id'=>$vacancyDescriptLink[0]['id']]);
-                insertVacancyDescript($db, $vacancyDescriptLink[0]['id'], $strDiscription);
-                $vacancyApdate = saveStatus($db, $tableName, $vacancyDescriptLink[0]['id'],'vacancy_status');
-
-            }
-            else {
-                $id=$vacancyDescriptLink[0]['id'];
-                deleteLink($db, $id);
-                view('error');
-
-            }
-        }
-    }
